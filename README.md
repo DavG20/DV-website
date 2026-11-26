@@ -56,3 +56,11 @@ All team members completed web programming courses during their bachelor's degre
 ## Data Handling and Processing Strategy
 
 We will use Python (pandas, Jupyter notebooks) to clean and prepare the data, and export it as CSV/JSON files that the website loads.
+
+To regenerate the chart data in `data/`:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python scripts/prepare_data.py
+```

@@ -1,0 +1,85 @@
+country,year,category,share
+Bangladesh,2022,Gradient 4 (highest),0.78
+Bangladesh,2022,Gradient 3 (significant),0.86
+Bangladesh,2022,Gradient 2 (moderate),9.38
+Bangladesh,2022,Gradient 1 (low),7.54
+Bangladesh,2022,Minimal,7.12
+Bangladesh,2022,Not exposed,74.32
+Brazil,2025,Gradient 4 (highest),5.26
+Brazil,2025,Gradient 3 (significant),4.8
+Brazil,2025,Gradient 2 (moderate),10.36
+Brazil,2025,Gradient 1 (low),8.93
+Brazil,2025,Minimal,15.33
+Brazil,2025,Not exposed,55.32
+Switzerland,2025,Gradient 4 (highest),7.35
+Switzerland,2025,Gradient 3 (significant),10.4
+Switzerland,2025,Gradient 2 (moderate),8.61
+Switzerland,2025,Gradient 1 (low),5.78
+Switzerland,2025,Minimal,21.27
+Switzerland,2025,Not exposed,46.59
+Czechia,2024,Gradient 4 (highest),4.21
+Czechia,2024,Gradient 3 (significant),8.74
+Czechia,2024,Gradient 2 (moderate),8.37
+Czechia,2024,Gradient 1 (low),5.63
+Czechia,2024,Minimal,21.72
+Czechia,2024,Not exposed,51.33
+Egypt,2024,Gradient 4 (highest),1.52
+Egypt,2024,Gradient 3 (significant),3.19
+Egypt,2024,Gradient 2 (moderate),4.13
+Egypt,2024,Gradient 1 (low),14.22
+Egypt,2024,Minimal,11.54
+Egypt,2024,Not exposed,65.41
+France,2025,Gradient 4 (highest),3.98
+France,2025,Gradient 3 (significant),10.45
+France,2025,Gradient 2 (moderate),11.32
+France,2025,Gradient 1 (low),4.57
+France,2025,Minimal,22.7
+France,2025,Not exposed,46.97
+United Kingdom,2025,Gradient 4 (highest),5.12
+United Kingdom,2025,Gradient 3 (significant),10.11
+United Kingdom,2025,Gradient 2 (moderate),14.67
+United Kingdom,2025,Gradient 1 (low),4.79
+United Kingdom,2025,Minimal,22.21
+United Kingdom,2025,Not exposed,43.11
+Indonesia,2024,Gradient 4 (highest),3.61
+Indonesia,2024,Gradient 3 (significant),1.04
+Indonesia,2024,Gradient 2 (moderate),9.11
+Indonesia,2024,Gradient 1 (low),8.61
+Indonesia,2024,Minimal,8.55
+Indonesia,2024,Not exposed,69.08
+Sri Lanka,2025,Gradient 4 (highest),2.17
+Sri Lanka,2025,Gradient 3 (significant),1.75
+Sri Lanka,2025,Gradient 2 (moderate),10.29
+Sri Lanka,2025,Gradient 1 (low),5.59
+Sri Lanka,2025,Minimal,9.86
+Sri Lanka,2025,Not exposed,70.34
+Mexico,2025,Gradient 4 (highest),3.3
+Mexico,2025,Gradient 3 (significant),3.75
+Mexico,2025,Gradient 2 (moderate),7.64
+Mexico,2025,Gradient 1 (low),9.55
+Mexico,2025,Minimal,15.9
+Mexico,2025,Not exposed,59.86
+Nigeria,2025,Gradient 4 (highest),0.29
+Nigeria,2025,Gradient 3 (significant),1.18
+Nigeria,2025,Gradient 2 (moderate),2.95
+Nigeria,2025,Gradient 1 (low),22.41
+Nigeria,2025,Minimal,4.91
+Nigeria,2025,Not exposed,68.27
+Pakistan,2025,Gradient 4 (highest),1.13
+Pakistan,2025,Gradient 3 (significant),1.29
+Pakistan,2025,Gradient 2 (moderate),10.86
+Pakistan,2025,Gradient 1 (low),5.32
+Pakistan,2025,Minimal,8.57
+Pakistan,2025,Not exposed,72.83
+Thailand,2025,Gradient 4 (highest),3.68
+Thailand,2025,Gradient 3 (significant),1.83
+Thailand,2025,Gradient 2 (moderate),6.86
+Thailand,2025,Gradient 1 (low),9.51
+Thailand,2025,Minimal,10.98
+Thailand,2025,Not exposed,67.14
+Uruguay,2025,Gradient 4 (highest),8.34
+Uruguay,2025,Gradient 3 (significant),4.78
+Uruguay,2025,Gradient 2 (moderate),7.02
+Uruguay,2025,Gradient 1 (low),9.03
+Uruguay,2025,Minimal,15.55
+Uruguay,2025,Not exposed,55.28

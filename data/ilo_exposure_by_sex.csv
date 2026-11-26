@@ -1,0 +1,13 @@
+country,sex,year,category,share
+France,Men,2025,Gradient 4 (highest),2.07
+France,Men,2025,Gradient 3 (significant),8.55
+France,Men,2025,Gradient 2 (moderate),11.25
+France,Men,2025,Gradient 1 (low),3.67
+France,Men,2025,Minimal,22.34
+France,Men,2025,Not exposed,52.12
+France,Women,2025,Gradient 4 (highest),5.99
+France,Women,2025,Gradient 3 (significant),12.44
+France,Women,2025,Gradient 2 (moderate),11.4
+France,Women,2025,Gradient 1 (low),5.51
+France,Women,2025,Minimal,23.09
+France,Women,2025,Not exposed,41.56

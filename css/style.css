@@ -1,0 +1,377 @@
+:root {
+  --unige-blue: #012578;
+  --text: #191919;
+  --text-secondary: #666;
+  --surface: #fff;
+  --page: #f6f7fa;
+  --border: #e2e4ea;
+  --grid: #e7e7e7;
+  --axis: #c2c2c2;
+
+  /* Ordinal blue ramp: AI exposure levels and enterprise sizes */
+  --blue-100: #cce3fd;
+  --blue-200: #9dc8f7;
+  --blue-250: #84b9f3;
+  --blue-300: #6aabf1;
+  --blue-400: #338ced;
+  --blue-450: #257de0;
+  --blue-500: #2370cd;
+  --blue-600: #1757ac;
+  --blue-700: #0e3d7e;
+  --not-exposed: #d6d6d6;
+  --missing: #f0f0f0;
+}
+
+/* ---------- Base ---------- */
+
+body {
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  color: var(--text);
+  background: var(--page);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--unige-blue);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--unige-blue);
+  color: #fff;
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+}
+
+.site-header a {
+  color: #fff;
+}
+
+.site-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.4rem;
+}
+
+.tagline {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.subtitle {
+  margin: 0 0 0.25rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.1rem;
+}
+
+.team {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team li {
+  display: inline;
+}
+
+.team li + li::before {
+  content: " · ";
+}
+
+.site-nav {
+  margin-top: 1.25rem;
+}
+
+.site-nav a {
+  margin: 0 0.75rem;
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main > section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+h2 {
+  color: var(--unige-blue);
+}
+
+.page-link {
+  font-weight: 600;
+}
+
+.site-footer {
+  background: var(--unige-blue);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 2rem 1rem 1rem;
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.site-footer h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+/* ---------- Charts ---------- */
+
+.chart {
+  width: 100%;
+}
+
+.chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.source {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.axis text,
+.axis-label {
+  fill: var(--text-secondary);
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  stroke: var(--axis);
+}
+
+.grid line {
+  stroke: var(--grid);
+}
+
+.grid path {
+  stroke: none;
+}
+
+.bar {
+  fill: var(--blue-500);
+}
+
+.mark:hover,
+.mark.active {
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+/* Exposure categories, from not exposed to highest exposure */
+.exp-0 { fill: var(--not-exposed); background: var(--not-exposed); }
+.exp-1 { fill: var(--blue-250); background: var(--blue-250); }
+.exp-2 { fill: var(--blue-400); background: var(--blue-400); }
+.exp-3 { fill: var(--blue-500); background: var(--blue-500); }
+.exp-4 { fill: var(--blue-600); background: var(--blue-600); }
+.exp-5 { fill: var(--blue-700); background: var(--blue-700); }
+
+/* Enterprise sizes */
+.size-0 { fill: var(--blue-250); background: var(--blue-250); }
+.size-1 { fill: var(--blue-500); background: var(--blue-500); }
+.size-2 { fill: var(--blue-700); background: var(--blue-700); }
+
+/* Heatmap bins */
+.heat-0 { fill: var(--blue-100); background: var(--blue-100); }
+.heat-1 { fill: var(--blue-200); background: var(--blue-200); }
+.heat-2 { fill: var(--blue-300); background: var(--blue-300); }
+.heat-3 { fill: var(--blue-400); background: var(--blue-400); }
+.heat-4 { fill: var(--blue-500); background: var(--blue-500); }
+.heat-5 { fill: var(--blue-600); background: var(--blue-600); }
+.heat-6 { fill: var(--blue-700); background: var(--blue-700); }
+.heat-missing { fill: var(--missing); background: var(--missing); }
+
+.waffle-title {
+  fill: var(--text);
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+}
+
+/* ---------- Legend ---------- */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  max-width: 260px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+.tooltip strong {
+  display: block;
+}
+
+/* ---------- Sections ---------- */
+
+.section-subtitle {
+  margin: 0.75rem 0 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #eef2fb;
+  border-left: 6px solid var(--unige-blue);
+  border-radius: 0 8px 8px 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--unige-blue);
+}
+
+.chart-block {
+  margin-top: 2.5rem;
+}
+
+.answer {
+  border-left: 4px solid var(--unige-blue);
+  padding: 0.25rem 0 0.25rem 1rem;
+}
+
+.swipe-hint {
+  display: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Charts keep a readable size and scroll sideways when the screen is narrow */
+.chart {
+  overflow-x: auto;
+}
+
+.chart svg {
+  min-width: 700px;
+}
+
+#chart-heatmap svg,
+#chart-waffle svg {
+  min-width: 480px;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.15rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .team li {
+    display: block;
+  }
+
+  .team li + li::before {
+    content: none;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  main > section {
+    padding: 0.25rem 1rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .chart-block {
+    margin-top: 2rem;
+  }
+
+  .swipe-hint {
+    display: block;
+  }
+}
