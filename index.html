@@ -6,142 +6,126 @@
   <title>AI and the Future of Employment</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Roboto+Slab:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="top">
-  <header class="site-header">
-    <h1>AI and the Future of Employment</h1>
-    <p class="tagline">Who is most exposed, and how is work changing?</p>
+<body id="top" class="page-home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="top-bar top-bar-home" id="top-bar">
+    <a class="top-bar-brand" href="index.html">AI &amp; Employment</a>
+    <nav class="top-bar-nav" aria-label="Primary">
+      <a href="#story">The story</a>
+      <a href="#for-you">For you</a>
+      <a href="#explore">Start</a>
+    </nav>
   </header>
 
-  <main>
-    <!-- Section 1: introduction -->
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p>
-        Artificial intelligence is moving quickly from research labs into everyday work.
-        This website asks one main question:
-        <strong>how does the rapid development and adoption of AI affect the transformation of the global labor market?</strong>
-      </p>
-      <p>
-        We answer it in sections, each looking at the data from a different angle. The first
-        section compares how AI reaches different jobs, countries, people and businesses.
-        Later sections will add other views.
-      </p>
-      <p>
-        The website is for students, employees, employers, policymakers, and anyone interested
-        in understanding how AI is transforming employment and the future of work.
-      </p>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="img/hero-employment.jpg" alt="" width="1600" height="900">
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title">AI and the Future of Employment</h1>
+        <p class="hero-lead">Who is most exposed, and how is work changing?</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#explore">See how work is changing</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Section 2: comparison charts, drawn by js/comparison.js -->
-    <section id="comparison">
-      <h2>Comparing AI Exposure and Adoption</h2>
-      <p class="section-subtitle">How do jobs, countries, people and businesses compare in their exposure to AI and their use of it?</p>
-      <p>
-        AI does not affect every worker in the same way. To answer this, we look at five
-        smaller questions, starting with individual jobs and widening the view to countries,
-        people and businesses.
-      </p>
-      <p class="swipe-hint">On a small screen, swipe a chart sideways to see all of it.</p>
+    <section id="story" class="band band-question">
+      <div class="band-inner">
+        <p class="story-kicker">One question drives everything here</p>
+        <h2 class="story-quote">
+          How does the rapid development and adoption of Artificial Intelligence
+          affect the transformation of the global labor market?
+        </h2>
+        <p class="band-note">
+          From the desk to the boardroom, from one country to another — we follow
+          the data to see who feels AI first, and how workplaces are already shifting.
+        </p>
+      </div>
+    </section>
 
-      <article class="chart-block">
-        <h3>Which jobs are most exposed to AI?</h3>
-        <p>
-          A good place to start is the work itself. This chart ranks professions by how much of
-          their work already shows up in real-world AI use, on a score from 0 to 1.
-        </p>
-        <div class="chart" id="chart-bar"></div>
-        <p class="answer">
-          Jobs built around text, data and code are the most exposed. Computer programmers lead
-          with a score of 0.75, followed by customer service representatives and data entry
-          keyers. These are mostly office jobs, which raises the next question: where in the
-          world are these jobs?
-        </p>
-        <p class="source">Source: <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex/blob/main/labor_market_impacts/job_exposure.csv">Anthropic Economic Index</a>, job exposure (US occupations).</p>
-      </article>
+    <section id="for-you" class="band band-audience">
+      <div class="band-inner">
+        <h2 class="invite-title">If this sounds like you, you’re in the right place</h2>
+        <ul class="invite-grid">
+          <li>
+            <p class="invite-line">You’re studying the labor market and want evidence, not slogans.</p>
+          </li>
+          <li>
+            <p class="invite-line">You’re working and wondering what AI means for your role.</p>
+          </li>
+          <li>
+            <p class="invite-line">You’re hiring or leading and need a clearer picture of adoption.</p>
+          </li>
+          <li>
+            <p class="invite-line">You’re shaping policy and looking for patterns across people and places.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <article class="chart-block">
-        <h3>How does exposure differ between countries?</h3>
-        <p>
-          Here each country's workforce is split by its level of exposure to generative AI,
-          from jobs that are not exposed to the most exposed (gradient 4).
+    <section id="explore" class="band band-explore">
+      <div class="band-inner">
+        <h2>Start anywhere</h2>
+        <p class="band-note">
+          Four ways into the same story. Pick the door that pulls you in.
         </p>
-        <ul class="legend" id="legend-exposure"></ul>
-        <div class="chart" id="chart-stacked"></div>
-        <p class="answer">
-          Exposure follows the type of economy. In Switzerland, the United Kingdom and France,
-          roughly one worker in six holds a highly exposed job (gradients 3 and 4). In Nigeria
-          and Bangladesh it is fewer than one in fifty, as far more people work in farming and
-          manual jobs there. But even inside one country, workers are not equally exposed.
-        </p>
-        <p class="source">Source: <a href="https://rshiny.ilo.org/dataexplorer85/?lang=en&amp;segment=indicator&amp;id=EMP_TEMP_SEX_GAI_NB_A&amp;channel=ilostat">ILOSTAT, employment by sex and generative AI exposure</a>, latest available year for each country.</p>
-      </article>
 
-      <article class="chart-block">
-        <h3>Are women and men equally exposed?</h3>
-        <p>
-          Taking France as an example, each square below is 1% of employed women or men.
-        </p>
-        <ul class="legend" id="legend-waffle"></ul>
-        <div class="chart" id="chart-waffle"></div>
-        <p class="answer">
-          No. About 18% of employed women in France work in highly exposed jobs, compared with
-          about 11% of men. In the most exposed group, gradient 4, women are almost three times
-          as likely to work as men (6% against 2%), since many of these are clerical and
-          administrative jobs. So far we have seen where AI <em>could</em> change work. Next:
-          are businesses actually using it?
-        </p>
-        <p class="source">Source: <a href="https://rshiny.ilo.org/dataexplorer85/?lang=en&amp;segment=indicator&amp;id=EMP_TEMP_SEX_GAI_NB_A&amp;channel=ilostat">ILOSTAT, employment by sex and generative AI exposure</a>, France, 2025.</p>
-      </article>
+        <div class="portal-grid">
+          <a class="portal" href="pages/jobs.html">
+            <div class="portal-media">
+              <img src="img/portal-jobs.jpg" alt="" width="800" height="600">
+            </div>
+            <div class="portal-body">
+              <span class="portal-index">01</span>
+              <h3>Jobs under pressure</h3>
+              <p>Which roles already show up in real AI use — and who holds them?</p>
+              <span class="portal-cta">Enter</span>
+            </div>
+          </a>
 
-      <article class="chart-block">
-        <h3>How fast are businesses adopting AI?</h3>
-        <p>
-          This heatmap shows the share of enterprises using at least one AI technology in each
-          European country, from 2021 to 2025.
-        </p>
-        <ul class="legend" id="legend-heat"></ul>
-        <div class="chart" id="chart-heatmap"></div>
-        <p class="answer">
-          Very fast, and especially since 2023. Across the EU, the share of enterprises using AI
-          went from about 8% in 2023 to 20% in 2025. The gap between countries is still wide:
-          42% of enterprises in Denmark use AI, but only 5% in Romania.
-        </p>
-        <p class="source">Source: <a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table">Eurostat, artificial intelligence in enterprises</a> (isoc_eb_ai), enterprises with 10 or more employees. No data was collected in 2022.</p>
-      </article>
+          <a class="portal" href="pages/tasks.html">
+            <div class="portal-media">
+              <img src="img/portal-tasks.jpg" alt="" width="800" height="600">
+            </div>
+            <div class="portal-body">
+              <span class="portal-index">02</span>
+              <h3>Work, task by task</h3>
+              <p>Where does AI take over, and where does it sit beside people?</p>
+              <span class="portal-cta">Enter</span>
+            </div>
+          </a>
 
-      <article class="chart-block">
-        <h3>Are large companies adopting AI faster than small ones?</h3>
-        <p>
-          Finally, the same 2025 adoption data split by company size.
-        </p>
-        <ul class="legend" id="legend-size"></ul>
-        <div class="chart" id="chart-grouped"></div>
-        <p class="answer">
-          Yes, in every country. Across the EU, 55% of large companies use AI, compared with 17%
-          of small ones. The difference is biggest where adoption is low: in Poland large
-          companies are about eight times as likely as small ones to use AI, in Denmark about
-          twice.
-        </p>
-        <p class="source">Source: <a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table">Eurostat, artificial intelligence in enterprises</a> (isoc_eb_ai), 2025.</p>
-      </article>
+          <a class="portal" href="pages/adoption.html">
+            <div class="portal-media">
+              <img src="img/portal-adoption.jpg" alt="" width="800" height="600">
+            </div>
+            <div class="portal-body">
+              <span class="portal-index">03</span>
+              <h3>Who is adopting AI</h3>
+              <p>How fast are businesses moving — and are large firms pulling ahead?</p>
+              <span class="portal-cta">Enter</span>
+            </div>
+          </a>
 
-      <article class="chart-block">
-        <h3>What does this mean for the labor market?</h3>
-        <p>
-          Back to our main question. AI's effect on the labor market is real but uneven. It
-          reaches office jobs built around text, data and code first, so it matters most in
-          richer economies, and, at least in France, more for women than for men. Businesses are
-          adopting it quickly, with large companies leading.
-        </p>
-        <p>
-          These charts show where AI <em>could</em> change work, not how many jobs have been
-          lost. Being exposed means AI can do or support part of a job, which may change that
-          job rather than replace it.
-        </p>
-      </article>
+          <a class="portal" href="pages/careers.html">
+            <div class="portal-media">
+              <img src="img/portal-careers.jpg" alt="" width="800" height="600">
+            </div>
+            <div class="portal-body">
+              <span class="portal-index">04</span>
+              <h3>What comes next</h3>
+              <p>Which new paths and opportunities open as AI spreads?</p>
+              <span class="portal-cta">Enter</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -162,21 +146,25 @@
         </ul>
       </div>
       <div>
-        <h2>Links</h2>
+        <h2>Continue</h2>
         <ul>
-          <li><a href="https://github.com/DavG20/DV-website">GitHub repository</a></li>
-          <li><a href="https://huggingface.co/datasets/Anthropic/EconomicIndex">Anthropic Economic Index</a></li>
-          <li><a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table">Eurostat</a></li>
-          <li><a href="https://ilostat.ilo.org/data/">ILOSTAT</a></li>
+          <li><a href="pages/jobs.html">Jobs under pressure</a></li>
+          <li><a href="pages/tasks.html">Work, task by task</a></li>
+          <li><a href="pages/adoption.html">Who is adopting AI</a></li>
+          <li><a href="pages/careers.html">What comes next</a></li>
         </ul>
       </div>
     </div>
     <p class="footer-bottom"><a href="#top">↑ Back to top</a></p>
   </footer>
 
-  <div class="tooltip" id="tooltip"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="js/comparison.js"></script>
+  <script>
+    const topBar = document.getElementById("top-bar");
+    const onScroll = () => {
+      topBar.classList.toggle("is-scrolled", window.scrollY > 48);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  </script>
 </body>
 </html>

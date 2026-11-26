@@ -13,14 +13,18 @@ const SIZES = ["Small (10-49)", "Medium (50-249)", "Large (250+)"];
 const HEAT_BINS = [5, 10, 15, 20, 25, 30]; // thresholds in % -> 7 bins
 
 const tooltip = d3.select("#tooltip");
+const DATA_ROOT = document.body.dataset.dataRoot || "data";
 const pct = (v) => `${d3.format(".1f")(v)}%`;
+const has = (selector) => Boolean(document.querySelector(selector));
 
 function showTooltip(event, html) {
+  if (tooltip.empty()) return;
   tooltip.html(html).classed("visible", true);
   moveTooltip(event);
 }
 
 function moveTooltip(event) {
+  if (tooltip.empty()) return;
   const node = tooltip.node();
   const x = Math.min(event.clientX + 14, window.innerWidth - node.offsetWidth - 8);
   const y = event.clientY - node.offsetHeight - 10;
@@ -28,6 +32,7 @@ function moveTooltip(event) {
 }
 
 function hideTooltip() {
+  if (tooltip.empty()) return;
   tooltip.classed("visible", false);
 }
 
@@ -45,6 +50,7 @@ function addHover(selection, html) {
 }
 
 function createSvg(container, width, height) {
+  if (!has(container)) return null;
   return d3
     .select(container)
     .append("svg")
@@ -53,6 +59,7 @@ function createSvg(container, width, height) {
 }
 
 function legend(container, labels, classPrefix) {
+  if (!has(container)) return;
   const items = d3.select(container).selectAll("li").data(labels).join("li");
   items.append("span").attr("class", (d, i) => `swatch ${classPrefix}-${i}`);
   items.append("span").text((d) => d);
@@ -70,6 +77,7 @@ function barChart(data) {
   const height = margin.top + margin.bottom + data.length * 28;
 
   const svg = createSvg("#chart-bar", width, height);
+  if (!svg) return;
   svg.attr("aria-label", "Bar chart of the 15 occupations with the highest observed AI exposure");
 
   const x = d3.scaleLinear().domain([0, 0.8]).range([margin.left, width - margin.right]);
@@ -122,6 +130,8 @@ function barChart(data) {
 // ---------- 2. Grouped bar chart: adoption by enterprise size ----------
 
 function groupedBarChart(data) {
+  if (!has("#chart-grouped")) return;
+
   const width = 900;
   const height = 420;
   const margin = { top: 20, right: 10, bottom: 50, left: 50 };
@@ -183,6 +193,8 @@ function groupedBarChart(data) {
 // ---------- 3. Heatmap: adoption by country and year ----------
 
 function heatmap(data) {
+  if (!has("#chart-heatmap")) return;
+
   const years = [...new Set(data.map((d) => d.year))].sort();
   const latest = d3.max(years);
   const countries = d3
@@ -241,6 +253,8 @@ function heatmap(data) {
 // ---------- 4. 100% stacked bar chart: exposure by country ----------
 
 function stackedBarChart(data) {
+  if (!has("#chart-stacked")) return;
+
   const rows = d3
     .groups(data, (d) => d.country)
     .map(([country, values]) => {
@@ -320,6 +334,8 @@ function toSquares(values) {
 }
 
 function waffleChart(data) {
+  if (!has("#chart-waffle")) return;
+
   const groups = ["Women", "Men"];
   const size = 24;
   const gap = 3;
@@ -363,16 +379,18 @@ const num = (d) => {
   return d;
 };
 
+const load = (file) => d3.csv(`${DATA_ROOT}/${file}`, num);
+
 Promise.all([
-  d3.csv("data/job_exposure_top15.csv", num),
-  d3.csv("data/eurostat_ai_adoption_by_size.csv", num),
-  d3.csv("data/eurostat_ai_adoption_by_year.csv", num),
-  d3.csv("data/ilo_exposure_by_country.csv", num),
-  d3.csv("data/ilo_exposure_by_sex.csv", num),
+  has("#chart-bar") ? load("job_exposure_top15.csv") : Promise.resolve(null),
+  has("#chart-grouped") ? load("eurostat_ai_adoption_by_size.csv") : Promise.resolve(null),
+  has("#chart-heatmap") ? load("eurostat_ai_adoption_by_year.csv") : Promise.resolve(null),
+  has("#chart-stacked") ? load("ilo_exposure_by_country.csv") : Promise.resolve(null),
+  has("#chart-waffle") ? load("ilo_exposure_by_sex.csv") : Promise.resolve(null),
 ]).then(([jobs, bySize, byYear, byCountry, bySex]) => {
-  barChart(jobs);
-  groupedBarChart(bySize);
-  heatmap(byYear);
-  stackedBarChart(byCountry);
-  waffleChart(bySex);
+  if (jobs) barChart(jobs);
+  if (bySize) groupedBarChart(bySize);
+  if (byYear) heatmap(byYear);
+  if (byCountry) stackedBarChart(byCountry);
+  if (bySex) waffleChart(bySex);
 });

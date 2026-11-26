@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption over time · AI and the Future of Employment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="top" class="page-inner" data-data-root="../data">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="top-bar">
+    <a class="top-bar-brand" href="../index.html">AI &amp; Employment</a>
+    <nav class="top-bar-nav" aria-label="Primary">
+      <a href="jobs.html">Jobs</a>
+      <a href="tasks.html">Tasks</a>
+      <a class="is-active" href="adoption.html">Adoption</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <p class="eyebrow">Supporting question 03</p>
+      <h1>How has AI adoption changed across industries and businesses over time?</h1>
+      <p class="page-hero-lead">
+        Potential exposure is only half the story. Here we look at whether enterprises are
+        actually using AI — and whether large firms are pulling ahead of smaller ones.
+      </p>
+    </header>
+
+    <section class="content-panel">
+      <p class="swipe-hint">On a small screen, swipe a chart sideways to see all of it.</p>
+
+      <article class="chart-block">
+        <h2>How fast are businesses adopting AI?</h2>
+        <p>
+          This heatmap shows the share of enterprises using at least one AI technology in each
+          European country, from 2021 to 2025.
+        </p>
+        <ul class="legend" id="legend-heat"></ul>
+        <div class="chart" id="chart-heatmap"></div>
+        <p class="answer">
+          Very fast, and especially since 2023. Across the EU, the share of enterprises using AI
+          went from about 8% in 2023 to 20% in 2025. The gap between countries is still wide:
+          42% of enterprises in Denmark use AI, but only 5% in Romania.
+        </p>
+        <p class="source">Source: <a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table">Eurostat, artificial intelligence in enterprises</a> (isoc_eb_ai), enterprises with 10 or more employees. No data was collected in 2022.</p>
+      </article>
+
+      <article class="chart-block">
+        <h2>Are large companies adopting AI faster than small ones?</h2>
+        <p>
+          The same 2025 adoption data, split by company size.
+        </p>
+        <ul class="legend" id="legend-size"></ul>
+        <div class="chart" id="chart-grouped"></div>
+        <p class="answer">
+          Yes, in every country. Across the EU, 55% of large companies use AI, compared with 17%
+          of small ones. The difference is biggest where adoption is low: in Poland large
+          companies are about eight times as likely as small ones to use AI, in Denmark about
+          twice.
+        </p>
+        <p class="source">Source: <a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table">Eurostat, artificial intelligence in enterprises</a> (isoc_eb_ai), 2025.</p>
+      </article>
+    </section>
+
+    <nav class="page-turn" aria-label="Continue exploring">
+      <a class="page-turn-prev" href="tasks.html">
+        <span>Previous</span>
+        <strong>Workplace tasks</strong>
+      </a>
+      <a href="careers.html">
+        <span>Next question</span>
+        <strong>Emerging careers</strong>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h2>AI and the Future of Employment</h2>
+        <p>Group Semicolon</p>
+        <p>Data Visualization course<br>Università di Genova</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs and opportunities</a></li>
+          <li><a href="tasks.html">Workplace tasks</a></li>
+          <li><a href="careers.html">Emerging careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/DavG20/DV-website">GitHub repository</a></li>
+          <li><a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table">Eurostat</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom"><a href="#top">↑ Back to top</a></p>
+  </footer>
+
+  <div class="tooltip" id="tooltip"></div>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="../js/comparison.js"></script>
+</body>
+</html>

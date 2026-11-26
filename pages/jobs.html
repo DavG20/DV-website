@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs and opportunities · AI and the Future of Employment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="top" class="page-inner" data-data-root="../data">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="top-bar">
+    <a class="top-bar-brand" href="../index.html">AI &amp; Employment</a>
+    <nav class="top-bar-nav" aria-label="Primary">
+      <a class="is-active" href="jobs.html">Jobs</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="adoption.html">Adoption</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <p class="eyebrow">Supporting question 01</p>
+      <h1>How does AI automation affect existing jobs and employment opportunities?</h1>
+      <p class="page-hero-lead">
+        We start with the work itself: which occupations already show up in real AI use,
+        how exposure varies by country, and whether women and men face the same risk.
+      </p>
+    </header>
+
+    <section class="content-panel">
+      <p class="swipe-hint">On a small screen, swipe a chart sideways to see all of it.</p>
+
+      <article class="chart-block">
+        <h2>Which jobs are most exposed to AI?</h2>
+        <p>
+          This chart ranks professions by how much of their work already shows up in
+          real-world AI use, on a score from 0 to 1.
+        </p>
+        <div class="chart" id="chart-bar"></div>
+        <p class="answer">
+          Jobs built around text, data and code are the most exposed. Computer programmers lead
+          with a score of 0.75, followed by customer service representatives and data entry
+          keyers. These are mostly office jobs, which raises the next question: where in the
+          world are these jobs?
+        </p>
+        <p class="source">Source: <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex/blob/main/labor_market_impacts/job_exposure.csv">Anthropic Economic Index</a>, job exposure (US occupations).</p>
+      </article>
+
+      <article class="chart-block">
+        <h2>How does exposure differ between countries?</h2>
+        <p>
+          Here each country's workforce is split by its level of exposure to generative AI,
+          from jobs that are not exposed to the most exposed (gradient 4).
+        </p>
+        <ul class="legend" id="legend-exposure"></ul>
+        <div class="chart" id="chart-stacked"></div>
+        <p class="answer">
+          Exposure follows the type of economy. In Switzerland, the United Kingdom and France,
+          roughly one worker in six holds a highly exposed job (gradients 3 and 4). In Nigeria
+          and Bangladesh it is fewer than one in fifty, as far more people work in farming and
+          manual jobs there. But even inside one country, workers are not equally exposed.
+        </p>
+        <p class="source">Source: <a href="https://rshiny.ilo.org/dataexplorer85/?lang=en&amp;segment=indicator&amp;id=EMP_TEMP_SEX_GAI_NB_A&amp;channel=ilostat">ILOSTAT, employment by sex and generative AI exposure</a>, latest available year for each country.</p>
+      </article>
+
+      <article class="chart-block">
+        <h2>Are women and men equally exposed?</h2>
+        <p>
+          Taking France as an example, each square below is 1% of employed women or men.
+        </p>
+        <ul class="legend" id="legend-waffle"></ul>
+        <div class="chart" id="chart-waffle"></div>
+        <p class="answer">
+          No. About 18% of employed women in France work in highly exposed jobs, compared with
+          about 11% of men. In the most exposed group, gradient 4, women are almost three times
+          as likely to work as men (6% against 2%), since many of these are clerical and
+          administrative jobs.
+        </p>
+        <p class="source">Source: <a href="https://rshiny.ilo.org/dataexplorer85/?lang=en&amp;segment=indicator&amp;id=EMP_TEMP_SEX_GAI_NB_A&amp;channel=ilostat">ILOSTAT, employment by sex and generative AI exposure</a>, France, 2025.</p>
+      </article>
+    </section>
+
+    <nav class="page-turn" aria-label="Continue exploring">
+      <a href="tasks.html">
+        <span>Next question</span>
+        <strong>Workplace tasks</strong>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h2>AI and the Future of Employment</h2>
+        <p>Group Semicolon</p>
+        <p>Data Visualization course<br>Università di Genova</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="tasks.html">Workplace tasks</a></li>
+          <li><a href="adoption.html">Adoption over time</a></li>
+          <li><a href="careers.html">Emerging careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/DavG20/DV-website">GitHub repository</a></li>
+          <li><a href="https://huggingface.co/datasets/Anthropic/EconomicIndex">Anthropic Economic Index</a></li>
+          <li><a href="https://ilostat.ilo.org/data/">ILOSTAT</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom"><a href="#top">↑ Back to top</a></p>
+  </footer>
+
+  <div class="tooltip" id="tooltip"></div>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="../js/comparison.js"></script>
+</body>
+</html>
